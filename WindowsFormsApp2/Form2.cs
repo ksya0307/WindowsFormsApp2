@@ -86,7 +86,7 @@ namespace WindowsFormsApp2
             add.Visible = true;
             del.Visible = true;
             dataGridView1.DataSource = usersBindingSource;
-            
+            //
             bindingNavigator1.BindingSource = usersBindingSource;
 
             this.Text = "Пользователи";
