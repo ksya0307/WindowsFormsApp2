@@ -251,6 +251,7 @@
     <EmbeddedResource Include="reportbuytick.resx">
       <DependentUpon>reportbuytick.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="reportDiagrammMovieCount.rdlc" />
     <EmbeddedResource Include="sales.rdlc" />
     <EmbeddedResource Include="ticket.rdlc" />
     <EmbeddedResource Include="Form1.resx">

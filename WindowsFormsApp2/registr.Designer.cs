@@ -68,7 +68,7 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox1.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(419, 375);
@@ -78,6 +78,7 @@
             // 
             // birth
             // 
+            this.birth.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.birth.Location = new System.Drawing.Point(160, 318);
             this.birth.Name = "birth";
             this.birth.Size = new System.Drawing.Size(215, 30);
@@ -85,6 +86,7 @@
             // 
             // phone
             // 
+            this.phone.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.phone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(66)))), ((int)(((byte)(74)))));
             this.phone.Location = new System.Drawing.Point(160, 279);
             this.phone.Name = "phone";
@@ -94,6 +96,7 @@
             // 
             // email
             // 
+            this.email.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(66)))), ((int)(((byte)(74)))));
             this.email.Location = new System.Drawing.Point(160, 240);
             this.email.Name = "email";
@@ -102,6 +105,7 @@
             // 
             // pass
             // 
+            this.pass.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.pass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(66)))), ((int)(((byte)(74)))));
             this.pass.Location = new System.Drawing.Point(160, 201);
             this.pass.Name = "pass";
@@ -110,6 +114,7 @@
             // 
             // login
             // 
+            this.login.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(66)))), ((int)(((byte)(74)))));
             this.login.Location = new System.Drawing.Point(160, 162);
             this.login.Name = "login";
@@ -118,6 +123,7 @@
             // 
             // dad_name
             // 
+            this.dad_name.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.dad_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(66)))), ((int)(((byte)(74)))));
             this.dad_name.Location = new System.Drawing.Point(160, 123);
             this.dad_name.Name = "dad_name";
@@ -127,6 +133,7 @@
             // 
             // name
             // 
+            this.name.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(66)))), ((int)(((byte)(74)))));
             this.name.Location = new System.Drawing.Point(160, 84);
             this.name.Name = "name";
@@ -136,6 +143,7 @@
             // 
             // last_name
             // 
+            this.last_name.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.last_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(66)))), ((int)(((byte)(74)))));
             this.last_name.Location = new System.Drawing.Point(160, 45);
             this.last_name.Name = "last_name";
@@ -146,6 +154,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
             this.label9.Location = new System.Drawing.Point(8, 318);
             this.label9.Name = "label9";
@@ -156,6 +165,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
             this.label8.Location = new System.Drawing.Point(7, 279);
             this.label8.Name = "label8";
@@ -166,6 +176,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
             this.label7.Location = new System.Drawing.Point(7, 240);
             this.label7.Name = "label7";
@@ -176,6 +187,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
             this.label6.Location = new System.Drawing.Point(7, 201);
             this.label6.Name = "label6";
@@ -186,6 +198,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
             this.label5.Location = new System.Drawing.Point(7, 162);
             this.label5.Name = "label5";
@@ -196,6 +209,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
             this.label4.Location = new System.Drawing.Point(6, 123);
             this.label4.Name = "label4";
@@ -206,6 +220,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
             this.label3.Location = new System.Drawing.Point(6, 84);
             this.label3.Name = "label3";
@@ -216,6 +231,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
             this.label2.Location = new System.Drawing.Point(6, 45);
             this.label2.Name = "label2";
@@ -230,9 +246,9 @@
             this.registracia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.registracia.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.registracia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(66)))), ((int)(((byte)(74)))));
-            this.registracia.Location = new System.Drawing.Point(118, 407);
+            this.registracia.Location = new System.Drawing.Point(12, 393);
             this.registracia.Name = "registracia";
-            this.registracia.Size = new System.Drawing.Size(193, 34);
+            this.registracia.Size = new System.Drawing.Size(419, 34);
             this.registracia.TabIndex = 23;
             this.registracia.Text = "ЗАРЕГИСТРИРОВАТЬСЯ";
             this.registracia.UseVisualStyleBackColor = false;
@@ -242,6 +258,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(449, 473);
             this.Controls.Add(this.registracia);
             this.Controls.Add(this.groupBox1);

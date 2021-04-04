@@ -30,7 +30,7 @@ namespace WindowsFormsApp2
             autouser.TabIndex = 2;
             
             textBox2.MaxLength = 20;
-            textBox2.TextAlign = HorizontalAlignment.Left;
+            textBox2.TextAlign = HorizontalAlignment.Center;
 
         }
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
@@ -112,7 +112,7 @@ namespace WindowsFormsApp2
 
         private void textBox1_Enter(object sender, EventArgs e)
         {
-            if (textBox1.Text == "login")
+            if (textBox1.Text == "Логин")
             {
                 textBox1.Text = "";
                 textBox1.ForeColor = Color.FromArgb(226,66,74);
@@ -123,14 +123,14 @@ namespace WindowsFormsApp2
         {
             if (textBox2.Text == "")
             {
-                textBox2.Text = "password";
+                textBox2.Text = "Пароль";
                 textBox2.ForeColor = Color.Silver;
             }
         }
 
         private void textBox2_Enter(object sender, EventArgs e)
         {
-            if (textBox2.Text == "password")
+            if (textBox2.Text == "Пароль")
             {
                 textBox2.Text = "";
                 textBox2.PasswordChar = '•';
@@ -142,9 +142,14 @@ namespace WindowsFormsApp2
         {
             if (textBox1.Text == "")
             {
-                textBox1.Text = "login";
+                textBox1.Text = "Логин";
                 textBox1.ForeColor = Color.Silver;
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
