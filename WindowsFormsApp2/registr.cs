@@ -77,7 +77,7 @@ namespace WindowsFormsApp2
                 else
                 {
                     ToAes256 toAes = new ToAes256();
-                    toAes.enc();
+                    string ecnrypted_password = toAes.SHA256HexHashString(pass.Text);
                    
                     command.Dispose();
                     command = new SqlCommand("users_insert", con);
@@ -90,8 +90,8 @@ namespace WindowsFormsApp2
                     command.Parameters["@dad_name"].Value = dad_name.Text;
                     command.Parameters.Add(new SqlParameter("@login", SqlDbType.NChar));
                     command.Parameters["@login"].Value = login.Text;
-                    command.Parameters.Add(new SqlParameter("@pass", SqlDbType.NChar));
-                    command.Parameters["@pass"].Value = pass.Text;
+                    command.Parameters.Add(new SqlParameter("@pass", SqlDbType.NVarChar));
+                    command.Parameters["@pass"].Value = ecnrypted_password;
                     command.Parameters.Add(new SqlParameter("@email", SqlDbType.NChar));
                     command.Parameters["@email"].Value = email.Text;
                     command.Parameters.Add(new SqlParameter("@phone", SqlDbType.NChar));
