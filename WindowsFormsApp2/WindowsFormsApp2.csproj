@@ -201,7 +201,7 @@
     <Compile Include="registr.Designer.cs">
       <DependentUpon>registr.cs</DependentUpon>
     </Compile>
-    <Compile Include="ToAes256.cs" />
+    <Compile Include="SHA256_pwd.cs" />
     <Compile Include="zal1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -241,9 +241,11 @@
     <EmbeddedResource Include="bookingguest.rdlc" />
     <EmbeddedResource Include="bookings.resx">
       <DependentUpon>bookings.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="buybook.resx">
       <DependentUpon>buybook.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportboutbuytickets.rdlc" />
     <EmbeddedResource Include="reportbuytick.resx">

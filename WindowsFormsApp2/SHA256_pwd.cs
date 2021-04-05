@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp2
 {
-    public class ToAes256
+    public class SHA256_pwd
     {
        
 

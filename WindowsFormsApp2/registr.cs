@@ -76,7 +76,7 @@ namespace WindowsFormsApp2
                 }
                 else
                 {
-                    ToAes256 toAes = new ToAes256();
+                    SHA256_pwd toAes = new SHA256_pwd();
                     string ecnrypted_password = toAes.SHA256HexHashString(pass.Text);
                    
                     command.Dispose();

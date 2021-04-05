@@ -31,6 +31,7 @@ namespace WindowsFormsApp2
             
             textBox2.MaxLength = 20;
             textBox2.TextAlign = HorizontalAlignment.Center;
+            
 
         }
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
@@ -39,6 +40,7 @@ namespace WindowsFormsApp2
         }
         private void autouser_Click(object sender, EventArgs e)
         {
+            SHA256_pwd shifr = new SHA256_pwd();
             //если не заполнено одно из полей ввода
             if (textBox1.Text == "" || textBox2.Text == "") MessageBox.Show("Вы заполнили не все поля,\n" +
                 "нажмите ОК, чтобы продолжить", "Уведомление", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -46,7 +48,7 @@ namespace WindowsFormsApp2
                 con.Open();//открытие подключения
                 //установление выражения которое будет выполняться
                 cmd = new SqlCommand("select login, password from dbo.users where login='" +
-                    textBox1.Text + "' and password='" + textBox2.Text + "';", con);
+                    textBox1.Text + "' and password='" + shifr.SHA256HexHashString(textBox2.Text) + "';", con);
                 //выполняет sql-выражение и возвращает строки из таблицы
                 SqlDataReader reader = cmd.ExecuteReader();
                 string login = "";
@@ -94,7 +96,7 @@ namespace WindowsFormsApp2
                         form3.Show();
                         this.Hide();
                         break;
-                    case 3://роль =2 открывается форма администратора
+                    case 3://роль =3 открывается форма администратора
                         Form2 form2 = new Form2(login);
                         form2.Show();
                         this.Hide();

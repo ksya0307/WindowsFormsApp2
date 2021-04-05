@@ -27,6 +27,7 @@ namespace WindowsFormsApp2
         }
         private void Form2_Load(object sender, EventArgs e)
         {
+            this.cinemaDataSet.EnforceConstraints = false;
    
             this.showsViewTableAdapter.Fill(this.cinemaDataSet.showsView);
             this.moviesViewTableAdapter.Fill(this.cinemaDataSet.moviesView);
