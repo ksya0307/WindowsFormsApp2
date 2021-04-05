@@ -27,24 +27,17 @@ namespace WindowsFormsApp2
         }
         private void Form2_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "cinemaDataSet.movie_genres". При необходимости она может быть перемещена или удалена.
-            this.movie_genresTableAdapter.Fill(this.cinemaDataSet.movie_genres);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "cinemaDataSet.ticketsView". При необходимости она может быть перемещена или удалена.
-            this.ticketsViewTableAdapter.Fill(this.cinemaDataSet.ticketsView);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "cinemaDataSet.tickets". При необходимости она может быть перемещена или удалена.
-            this.ticketsTableAdapter.Fill(this.cinemaDataSet.tickets);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "cinemaDataSet.movie_genres". При необходимости она может быть перемещена или удалена.
-            this.movie_genresTableAdapter.Fill(this.cinemaDataSet.movie_genres);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "cinemaDataSet.movie_countries". При необходимости она может быть перемещена или удалена.
-            this.movie_countriesTableAdapter.Fill(this.cinemaDataSet.movie_countries);
-            //this.ticketsView2TableAdapter.Fill(this.cinemaDataSet.ticketsView2);
-            this.usersTableAdapter.Fill(this.cinemaDataSet.users);
-           // this.tickets3TableAdapter.Fill(this.cinemaDataSet.tickets3);
+   
             this.showsViewTableAdapter.Fill(this.cinemaDataSet.showsView);
+            this.moviesViewTableAdapter.Fill(this.cinemaDataSet.moviesView);
+            this.ticketsViewTableAdapter.Fill(this.cinemaDataSet.ticketsView);
+
+            this.ticketsTableAdapter.Fill(this.cinemaDataSet.tickets);
+            this.movie_genresTableAdapter.Fill(this.cinemaDataSet.movie_genres);
+            this.movie_countriesTableAdapter.Fill(this.cinemaDataSet.movie_countries);
+            this.usersTableAdapter.Fill(this.cinemaDataSet.users);
             this.showsTableAdapter.Fill(this.cinemaDataSet.shows);
             this.seatsTableAdapter.Fill(this.cinemaDataSet.seats);
-            
-            this.moviesViewTableAdapter.Fill(this.cinemaDataSet.moviesView);
             this.rolesTableAdapter.Fill(this.cinemaDataSet.roles);
             this.moviesTableAdapter.Fill(this.cinemaDataSet.movies);
             this.genresTableAdapter.Fill(this.cinemaDataSet.genres);
