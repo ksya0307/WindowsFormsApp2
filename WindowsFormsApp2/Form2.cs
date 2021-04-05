@@ -27,9 +27,19 @@ namespace WindowsFormsApp2
         }
         private void Form2_Load(object sender, EventArgs e)
         {
-            this.ticketsView2TableAdapter.Fill(this.cinemaDataSet.ticketsView2);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cinemaDataSet.movie_genres". При необходимости она может быть перемещена или удалена.
+            this.movie_genresTableAdapter.Fill(this.cinemaDataSet.movie_genres);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cinemaDataSet.ticketsView". При необходимости она может быть перемещена или удалена.
+            this.ticketsViewTableAdapter.Fill(this.cinemaDataSet.ticketsView);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cinemaDataSet.tickets". При необходимости она может быть перемещена или удалена.
+            this.ticketsTableAdapter.Fill(this.cinemaDataSet.tickets);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cinemaDataSet.movie_genres". При необходимости она может быть перемещена или удалена.
+            this.movie_genresTableAdapter.Fill(this.cinemaDataSet.movie_genres);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cinemaDataSet.movie_countries". При необходимости она может быть перемещена или удалена.
+            this.movie_countriesTableAdapter.Fill(this.cinemaDataSet.movie_countries);
+            //this.ticketsView2TableAdapter.Fill(this.cinemaDataSet.ticketsView2);
             this.usersTableAdapter.Fill(this.cinemaDataSet.users);
-            this.tickets3TableAdapter.Fill(this.cinemaDataSet.tickets3);
+           // this.tickets3TableAdapter.Fill(this.cinemaDataSet.tickets3);
             this.showsViewTableAdapter.Fill(this.cinemaDataSet.showsView);
             this.showsTableAdapter.Fill(this.cinemaDataSet.shows);
             this.seatsTableAdapter.Fill(this.cinemaDataSet.seats);
@@ -127,12 +137,11 @@ namespace WindowsFormsApp2
 
             dataGridView1.Columns["id"].HeaderText = "ID";
             dataGridView1.Columns["movie"].HeaderText = "Фильм";
-            dataGridView1.Columns["country"].HeaderText = "Страна";
             dataGridView1.Columns["running_time"].HeaderText = "Длительность";
             dataGridView1.Columns["age"].HeaderText = "Возрастное ограничение";
             dataGridView1.Columns["year"].HeaderText = "Год";
             dataGridView1.Columns["description"].HeaderText = "Описание";
-            dataGridView1.Columns["genre"].HeaderText = "Жанр";
+          
 
             toolStripStatusLabel1.Text = Convert.ToString(dataGridView1.Rows.Count-1);
             
@@ -221,7 +230,7 @@ namespace WindowsFormsApp2
         }
         private void билетыToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.tickets3TableAdapter.Fill(this.cinemaDataSet.tickets3);
+            this.ticketsTableAdapter.Fill(this.cinemaDataSet.tickets);
             pictureBox1.Visible = false;
             this.Text = "Билеты";
             bindingNavigatorAddNewItem.Visible = true;
@@ -229,13 +238,13 @@ namespace WindowsFormsApp2
             add.Visible = true;
             del.Visible = true;
             tableName = "tickets";
-            dataGridView1.DataSource = tickets3BindingSource;
+            dataGridView1.DataSource = ticketsBindingSource;
             
-            bindingNavigator1.BindingSource = tickets3BindingSource;
+            bindingNavigator1.BindingSource = ticketsBindingSource;
             dataGridView1.Columns["id"].HeaderText = "ID";
             dataGridView1.Columns["show"].HeaderText = "Сеанс";
             dataGridView1.Columns["seat"].HeaderText = "Место";
-            dataGridView1.Columns["guest"].HeaderText = "Пользователь";
+            dataGridView1.Columns["customer"].HeaderText = "Пользователь";
             dataGridView1.AutoResizeColumns();
             toolStripStatusLabel1.Text = Convert.ToString(dataGridView1.Rows.Count-1);
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
@@ -253,8 +262,8 @@ namespace WindowsFormsApp2
             bindingNavigatorAddNewItem.Visible = true;
             bindingNavigatorAddNewItem.Visible = false;
             bindingNavigatorDeleteItem.Visible = false;
-            dataGridView1.DataSource = ticketsView2BindingSource1;
-            bindingNavigator1.BindingSource = ticketsView2BindingSource1;
+            dataGridView1.DataSource = ticketsViewBindingSource;
+            bindingNavigator1.BindingSource = ticketsViewBindingSource;
             for (int i=0;i<dataGridView1.Rows.Count;i++)
             {
                 dataGridView1.Rows[i].Height = 30;
@@ -426,8 +435,8 @@ namespace WindowsFormsApp2
                 case "tickets":
                     try
                     {
-                        tickets3BindingSource.EndEdit();
-                        tickets3TableAdapter.Update(this.cinemaDataSet.tickets3);
+                        ticketsBindingSource.EndEdit();
+                        ticketsTableAdapter.Update(this.cinemaDataSet.tickets);
                         MessageBox.Show("Данные сохранены!", "Уведомление", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     catch (Exception ex)
@@ -482,8 +491,8 @@ namespace WindowsFormsApp2
                     MessageBox.Show("Новые данные добавлены!", "Уведомление", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     break;
                 case "tickets":
-                    tickets3TableAdapter.Update(cinemaDataSet);
-                    dataGridView1.DataSource = tickets3BindingSource;
+                    ticketsTableAdapter.Update(cinemaDataSet);
+                    dataGridView1.DataSource = ticketsBindingSource;
                     MessageBox.Show("Новые данные добавлены!", "Уведомление", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     break;
                 case "roles":
@@ -593,6 +602,57 @@ namespace WindowsFormsApp2
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
            getdate = dateTimePicker1.Value.ToString("yyyy-MM-dd");
+        }
+
+        private void фильмЖанрыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.movie_genresTableAdapter.Fill(this.cinemaDataSet.movie_genres);
+            pictureBox1.Visible = false;
+            this.Text = "Фильм_Жанры";
+            bindingNavigatorAddNewItem.Visible = true;
+            change_tb.Visible = true;
+            add.Visible = true;
+            del.Visible = true;
+            tableName = "movie_genres";
+            dataGridView1.DataSource = movie_genresBindingSource;
+
+            bindingNavigator1.BindingSource = movie_genresBindingSource;
+            dataGridView1.Columns["movie"].HeaderText = "Фильм";
+            dataGridView1.Columns["genre"].HeaderText = "Жанр";
+
+            dataGridView1.AutoResizeColumns();
+            toolStripStatusLabel1.Text = Convert.ToString(dataGridView1.Rows.Count);
+
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                dataGridView1.Rows[i].Height = 30;
+            }
+        }
+
+        private void фильмСтраныToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.movie_countriesTableAdapter.Fill(this.cinemaDataSet.movie_countries);
+            pictureBox1.Visible = false;
+            this.Text = "Фильм_Страны";
+            bindingNavigatorAddNewItem.Visible = true;
+            change_tb.Visible = true;
+            add.Visible = true;
+            del.Visible = true;
+            tableName = "movie_countries";
+            dataGridView1.DataSource = movie_countriesBindingSource;
+
+            bindingNavigator1.BindingSource = movie_countriesBindingSource;
+            dataGridView1.Columns["movie"].HeaderText = "Фильм";
+            dataGridView1.Columns["country"].HeaderText = "Страна";
+
+            dataGridView1.AutoResizeColumns();
+            toolStripStatusLabel1.Text = Convert.ToString(dataGridView1.Rows.Count);
+
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                dataGridView1.Rows[i].Height = 30;
+            }
+
         }
     }
 }

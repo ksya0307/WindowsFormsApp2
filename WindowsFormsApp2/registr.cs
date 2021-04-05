@@ -76,6 +76,9 @@ namespace WindowsFormsApp2
                 }
                 else
                 {
+                    ToAes256 toAes = new ToAes256();
+                    toAes.enc();
+                   
                     command.Dispose();
                     command = new SqlCommand("users_insert", con);
                     command.CommandType = CommandType.StoredProcedure;

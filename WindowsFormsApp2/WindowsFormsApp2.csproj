@@ -138,9 +138,6 @@
     <Compile Include="buybook.Designer.cs">
       <DependentUpon>buybook.cs</DependentUpon>
     </Compile>
-    <Compile Include="cinemaDataSet.cs">
-      <DependentUpon>cinemaDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="cinemaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -204,6 +201,7 @@
     <Compile Include="registr.Designer.cs">
       <DependentUpon>registr.cs</DependentUpon>
     </Compile>
+    <Compile Include="ToAes256.cs" />
     <Compile Include="zal1.cs">
       <SubType>Form</SubType>
     </Compile>

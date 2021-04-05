@@ -26,9 +26,8 @@ namespace WindowsFormsApp2
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "cinemaDataSet.ticketsView2". При необходимости она может быть перемещена или удалена.
-            
-            this.ticketsView2TableAdapter.Fill(this.cinemaDataSet.ticketsView2);
+
+            this.ticketsTableAdapter.Fill(this.cinemaDataSet.tickets);    
             this.showsViewTableAdapter.Fill(this.cinemaDataSet.showsView);
             this.moviesViewTableAdapter.Fill(this.cinemaDataSet.moviesView);
 

@@ -21,7 +21,7 @@ namespace WindowsFormsApp2
 
         private void reportbuytick_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "cinemaDataSet.report_buy_tickets". При необходимости она может быть перемещена или удалена.
+            
             this.report_buy_ticketsTableAdapter.Fill(this.cinemaDataSet.report_buy_tickets, date);
 
             this.reportViewer1.RefreshReport();

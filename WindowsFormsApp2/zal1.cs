@@ -220,7 +220,7 @@ namespace WindowsFormsApp2
                     if (object.ReferenceEquals(((PictureBox)c).Image, redChair))
                     {
                         iSeatNum = Convert.ToInt32(((PictureBox)c).Name.Remove(0, 10));
-                        cmd = new SqlCommand("INSERT INTO tickets (show,seat,guest) values(" + idshowget + "," + iSeatNum + "," + user + ");", con);
+                        cmd = new SqlCommand("INSERT INTO tickets (show,seat,customer) values(" + idshowget + "," + iSeatNum + "," + user + ");", con);
                         cmd.ExecuteNonQuery();
                     }
                 }
@@ -245,7 +245,7 @@ namespace WindowsFormsApp2
         {
             con.Open();//открытие соединения
             //sql выражение которое будет выполняться с полученным id сеанса
-            cmd = new SqlCommand("select id,show,seat,guest from tickets where show=" + idshowget,con);
+            cmd = new SqlCommand("select id,show,seat,customer from tickets where show=" + idshowget,con);
             DataSet dstickets = new DataSet();//создаем объект dataset, который будет источником данных
             SqlDataAdapter datickets= new SqlDataAdapter(cmd);//создание объекта SqlDataAdapter для получения данных
             datickets.Fill(dstickets, "Tickets");//заполнение dataset

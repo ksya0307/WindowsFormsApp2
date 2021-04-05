@@ -69,7 +69,7 @@ namespace WindowsFormsApp2
             con.Close();
 
             con.Open();
-            cmd = new SqlCommand("INSERT INTO TICKETS(show,seat,guest) values(" + idshow + "," + seat + "," + cust + ")",con);
+            cmd = new SqlCommand("INSERT INTO TICKETS(show,seat,customer) values(" + idshow + "," + seat + "," + cust + ")",con);
             cmd.ExecuteNonQuery();
             cmd.Dispose();
             con.Close();

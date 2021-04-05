@@ -145,7 +145,7 @@ namespace WindowsFormsApp2
                     if (object.ReferenceEquals(((PictureBox)c).Image, redChair))
                     {
                         iSeatNum = Convert.ToInt32(((PictureBox)c).Name.Remove(0, 10));
-                        cmd = new SqlCommand("INSERT INTO tickets (show,seat,guest) values(" + idshowget + "," + iSeatNum + "," + user + ");", con);
+                        cmd = new SqlCommand("INSERT INTO tickets (show,seat,customer) values(" + idshowget + "," + iSeatNum + "," + user + ");", con);
                         cmd.ExecuteNonQuery();
                     }
                 }
@@ -223,7 +223,7 @@ namespace WindowsFormsApp2
         private void UpdateTickets()
         {
             con.Open();
-            cmd = new SqlCommand("select id,show,seat,guest from tickets where show=" + idshowget,con);
+            cmd = new SqlCommand("select id,show,seat,customer from tickets where show=" + idshowget,con);
             
             DataSet dstickets = new DataSet();
             SqlDataAdapter datickets = new SqlDataAdapter(cmd);

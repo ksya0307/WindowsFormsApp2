@@ -66,7 +66,7 @@ namespace WindowsFormsApp2
             }
             reader.Close();
             cmd.Dispose();
-
+            label1.Text = lastname + " " + name;
             con.Close();
 
             //monthCalendar1.MinDate = DateTime.Now;

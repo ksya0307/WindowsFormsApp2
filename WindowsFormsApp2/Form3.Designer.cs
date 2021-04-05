@@ -68,8 +68,8 @@
             this.showsViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.showsViewTableAdapter = new WindowsFormsApp2.cinemaDataSetTableAdapters.showsViewTableAdapter();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.ticketsView2BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ticketsView2TableAdapter = new WindowsFormsApp2.cinemaDataSetTableAdapters.ticketsView2TableAdapter();
+            this.ticketsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ticketsTableAdapter = new WindowsFormsApp2.cinemaDataSetTableAdapters.ticketsTableAdapter();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
@@ -79,7 +79,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.moviesViewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.showsViewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ticketsView2BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ticketsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // exit
@@ -300,7 +300,6 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -372,14 +371,12 @@
             this.tableAdapterManager.Connection = null;
             this.tableAdapterManager.countriesTableAdapter = null;
             this.tableAdapterManager.genresTableAdapter = null;
+            this.tableAdapterManager.movie_countriesTableAdapter = null;
+            this.tableAdapterManager.movie_genresTableAdapter = null;
             this.tableAdapterManager.moviesTableAdapter = null;
             this.tableAdapterManager.rolesTableAdapter = null;
             this.tableAdapterManager.seatsTableAdapter = null;
             this.tableAdapterManager.showsTableAdapter = null;
-            this.tableAdapterManager.tickets1TableAdapter = null;
-            this.tableAdapterManager.tickets2TableAdapter = null;
-            this.tableAdapterManager.tickets3TableAdapter = null;
-            this.tableAdapterManager.tickets4TableAdapter = null;
             this.tableAdapterManager.ticketsTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = WindowsFormsApp2.cinemaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.usersTableAdapter = null;
@@ -404,14 +401,14 @@
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
-            // ticketsView2BindingSource
+            // ticketsBindingSource
             // 
-            this.ticketsView2BindingSource.DataMember = "ticketsView2";
-            this.ticketsView2BindingSource.DataSource = this.cinemaDataSet;
+            this.ticketsBindingSource.DataMember = "tickets";
+            this.ticketsBindingSource.DataSource = this.cinemaDataSet;
             // 
-            // ticketsView2TableAdapter
+            // ticketsTableAdapter
             // 
-            this.ticketsView2TableAdapter.ClearBeforeFill = true;
+            this.ticketsTableAdapter.ClearBeforeFill = true;
             // 
             // Form3
             // 
@@ -447,7 +444,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.moviesViewBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.showsViewBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ticketsView2BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ticketsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -491,7 +488,9 @@
         private cinemaDataSetTableAdapters.showsViewTableAdapter showsViewTableAdapter;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem оформитьБилетToolStripMenuItem;
-        private System.Windows.Forms.BindingSource ticketsView2BindingSource;
-        private cinemaDataSetTableAdapters.ticketsView2TableAdapter ticketsView2TableAdapter;
+        private System.Windows.Forms.BindingSource ticketsBindingSource;
+        private cinemaDataSetTableAdapters.ticketsTableAdapter ticketsTableAdapter;
+        //  private System.Windows.Forms.BindingSource ticketsView2BindingSource;
+        //private cinemaDataSetTableAdapters.ticketsView2TableAdapter ticketsView2TableAdapter;
     }
 }

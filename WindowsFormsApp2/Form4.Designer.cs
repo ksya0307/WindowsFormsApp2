@@ -250,10 +250,10 @@
             this.tableAdapterManager.rolesTableAdapter = null;
             this.tableAdapterManager.seatsTableAdapter = null;
             this.tableAdapterManager.showsTableAdapter = null;
-            this.tableAdapterManager.tickets1TableAdapter = null;
-            this.tableAdapterManager.tickets2TableAdapter = null;
-            this.tableAdapterManager.tickets3TableAdapter = null;
-            this.tableAdapterManager.tickets4TableAdapter = null;
+            //this.tableAdapterManager.tickets1TableAdapter = null;
+            //this.tableAdapterManager.tickets2TableAdapter = null;
+            //this.tableAdapterManager.tickets3TableAdapter = null;
+            //this.tableAdapterManager.tickets4TableAdapter = null;
             this.tableAdapterManager.ticketsTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = WindowsFormsApp2.cinemaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.usersTableAdapter = null;

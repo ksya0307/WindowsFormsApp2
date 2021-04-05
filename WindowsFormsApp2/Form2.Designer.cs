@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.таблицыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.пользователиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,6 +43,8 @@
             this.брониToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.местаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ролиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.фильмЖанрыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.фильмСтраныToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.билетыToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.фильмыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сеансыToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,57 +54,60 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.change_tb = new System.Windows.Forms.Button();
             this.add = new System.Windows.Forms.Button();
             this.del = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.cinemaDataSet = new WindowsFormsApp2.cinemaDataSet();
-            this.tableAdapterManager = new WindowsFormsApp2.cinemaDataSetTableAdapters.TableAdapterManager();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.bookingsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bookingsTableAdapter = new WindowsFormsApp2.cinemaDataSetTableAdapters.bookingsTableAdapter();
             this.countriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.countriesTableAdapter = new WindowsFormsApp2.cinemaDataSetTableAdapters.countriesTableAdapter();
             this.genresBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.genresTableAdapter = new WindowsFormsApp2.cinemaDataSetTableAdapters.genresTableAdapter();
             this.moviesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.moviesTableAdapter = new WindowsFormsApp2.cinemaDataSetTableAdapters.moviesTableAdapter();
             this.rolesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.rolesTableAdapter = new WindowsFormsApp2.cinemaDataSetTableAdapters.rolesTableAdapter();
             this.moviesViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.moviesViewTableAdapter = new WindowsFormsApp2.cinemaDataSetTableAdapters.moviesViewTableAdapter();
             this.seatsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.seatsTableAdapter = new WindowsFormsApp2.cinemaDataSetTableAdapters.seatsTableAdapter();
             this.showsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.showsTableAdapter = new WindowsFormsApp2.cinemaDataSetTableAdapters.showsTableAdapter();
             this.showsViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.showsViewTableAdapter = new WindowsFormsApp2.cinemaDataSetTableAdapters.showsViewTableAdapter();
-            this.tickets3BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tickets3TableAdapter = new WindowsFormsApp2.cinemaDataSetTableAdapters.tickets3TableAdapter();
+            this.movie_countriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ticketsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ticketsViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ticketsViewTableAdapter = new WindowsFormsApp2.cinemaDataSetTableAdapters.ticketsViewTableAdapter();
+            this.movie_genresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cinemaDataSet = new WindowsFormsApp2.cinemaDataSet();
+            this.tableAdapterManager = new WindowsFormsApp2.cinemaDataSetTableAdapters.TableAdapterManager();
+            this.bookingsTableAdapter = new WindowsFormsApp2.cinemaDataSetTableAdapters.bookingsTableAdapter();
+            this.countriesTableAdapter = new WindowsFormsApp2.cinemaDataSetTableAdapters.countriesTableAdapter();
+            this.genresTableAdapter = new WindowsFormsApp2.cinemaDataSetTableAdapters.genresTableAdapter();
+            this.moviesTableAdapter = new WindowsFormsApp2.cinemaDataSetTableAdapters.moviesTableAdapter();
+            this.rolesTableAdapter = new WindowsFormsApp2.cinemaDataSetTableAdapters.rolesTableAdapter();
+            this.moviesViewTableAdapter = new WindowsFormsApp2.cinemaDataSetTableAdapters.moviesViewTableAdapter();
+            this.seatsTableAdapter = new WindowsFormsApp2.cinemaDataSetTableAdapters.seatsTableAdapter();
+            this.showsTableAdapter = new WindowsFormsApp2.cinemaDataSetTableAdapters.showsTableAdapter();
+            this.showsViewTableAdapter = new WindowsFormsApp2.cinemaDataSetTableAdapters.showsViewTableAdapter();
             this.usersTableAdapter = new WindowsFormsApp2.cinemaDataSetTableAdapters.usersTableAdapter();
-            this.ticketsView2TableAdapter = new WindowsFormsApp2.cinemaDataSetTableAdapters.ticketsView2TableAdapter();
-            this.ticketsView2BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.movie_countriesTableAdapter = new WindowsFormsApp2.cinemaDataSetTableAdapters.movie_countriesTableAdapter();
+            this.ticketsTableAdapter = new WindowsFormsApp2.cinemaDataSetTableAdapters.ticketsTableAdapter();
+            this.movie_genresTableAdapter = new WindowsFormsApp2.cinemaDataSetTableAdapters.movie_genresTableAdapter();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cinemaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.countriesBindingSource)).BeginInit();
@@ -113,9 +118,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.seatsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.showsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.showsViewBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tickets3BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ticketsView2BindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.movie_countriesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ticketsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ticketsViewBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.movie_genresBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cinemaDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -131,7 +139,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(11, 4, 0, 4);
-            this.menuStrip1.Size = new System.Drawing.Size(1233, 35);
+            this.menuStrip1.Size = new System.Drawing.Size(1246, 35);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -146,7 +154,9 @@
             this.билетыToolStripMenuItem,
             this.брониToolStripMenuItem,
             this.местаToolStripMenuItem,
-            this.ролиToolStripMenuItem});
+            this.ролиToolStripMenuItem,
+            this.фильмЖанрыToolStripMenuItem,
+            this.фильмСтраныToolStripMenuItem});
             this.таблицыToolStripMenuItem.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.таблицыToolStripMenuItem.Name = "таблицыToolStripMenuItem";
             this.таблицыToolStripMenuItem.Size = new System.Drawing.Size(98, 27);
@@ -155,65 +165,79 @@
             // пользователиToolStripMenuItem
             // 
             this.пользователиToolStripMenuItem.Name = "пользователиToolStripMenuItem";
-            this.пользователиToolStripMenuItem.Size = new System.Drawing.Size(203, 28);
+            this.пользователиToolStripMenuItem.Size = new System.Drawing.Size(213, 28);
             this.пользователиToolStripMenuItem.Text = "Пользователи";
             this.пользователиToolStripMenuItem.Click += new System.EventHandler(this.пользователиToolStripMenuItem_Click);
             // 
             // фильмToolStripMenuItem
             // 
             this.фильмToolStripMenuItem.Name = "фильмToolStripMenuItem";
-            this.фильмToolStripMenuItem.Size = new System.Drawing.Size(203, 28);
+            this.фильмToolStripMenuItem.Size = new System.Drawing.Size(213, 28);
             this.фильмToolStripMenuItem.Text = "Фильмы";
             this.фильмToolStripMenuItem.Click += new System.EventHandler(this.фильмToolStripMenuItem_Click);
             // 
             // страныToolStripMenuItem
             // 
             this.страныToolStripMenuItem.Name = "страныToolStripMenuItem";
-            this.страныToolStripMenuItem.Size = new System.Drawing.Size(203, 28);
+            this.страныToolStripMenuItem.Size = new System.Drawing.Size(213, 28);
             this.страныToolStripMenuItem.Text = "Страны";
             this.страныToolStripMenuItem.Click += new System.EventHandler(this.страныToolStripMenuItem_Click);
             // 
             // жанрыToolStripMenuItem
             // 
             this.жанрыToolStripMenuItem.Name = "жанрыToolStripMenuItem";
-            this.жанрыToolStripMenuItem.Size = new System.Drawing.Size(203, 28);
+            this.жанрыToolStripMenuItem.Size = new System.Drawing.Size(213, 28);
             this.жанрыToolStripMenuItem.Text = "Жанры";
             this.жанрыToolStripMenuItem.Click += new System.EventHandler(this.жанрыToolStripMenuItem_Click);
             // 
             // сеансыToolStripMenuItem
             // 
             this.сеансыToolStripMenuItem.Name = "сеансыToolStripMenuItem";
-            this.сеансыToolStripMenuItem.Size = new System.Drawing.Size(203, 28);
+            this.сеансыToolStripMenuItem.Size = new System.Drawing.Size(213, 28);
             this.сеансыToolStripMenuItem.Text = "Сеансы";
             this.сеансыToolStripMenuItem.Click += new System.EventHandler(this.сеансыToolStripMenuItem_Click);
             // 
             // билетыToolStripMenuItem
             // 
             this.билетыToolStripMenuItem.Name = "билетыToolStripMenuItem";
-            this.билетыToolStripMenuItem.Size = new System.Drawing.Size(203, 28);
+            this.билетыToolStripMenuItem.Size = new System.Drawing.Size(213, 28);
             this.билетыToolStripMenuItem.Text = "Билеты";
             this.билетыToolStripMenuItem.Click += new System.EventHandler(this.билетыToolStripMenuItem_Click);
             // 
             // брониToolStripMenuItem
             // 
             this.брониToolStripMenuItem.Name = "брониToolStripMenuItem";
-            this.брониToolStripMenuItem.Size = new System.Drawing.Size(203, 28);
+            this.брониToolStripMenuItem.Size = new System.Drawing.Size(213, 28);
             this.брониToolStripMenuItem.Text = "Брони";
             this.брониToolStripMenuItem.Click += new System.EventHandler(this.брониToolStripMenuItem_Click);
             // 
             // местаToolStripMenuItem
             // 
             this.местаToolStripMenuItem.Name = "местаToolStripMenuItem";
-            this.местаToolStripMenuItem.Size = new System.Drawing.Size(203, 28);
+            this.местаToolStripMenuItem.Size = new System.Drawing.Size(213, 28);
             this.местаToolStripMenuItem.Text = "Места";
             this.местаToolStripMenuItem.Click += new System.EventHandler(this.местаToolStripMenuItem_Click);
             // 
             // ролиToolStripMenuItem
             // 
             this.ролиToolStripMenuItem.Name = "ролиToolStripMenuItem";
-            this.ролиToolStripMenuItem.Size = new System.Drawing.Size(203, 28);
+            this.ролиToolStripMenuItem.Size = new System.Drawing.Size(213, 28);
             this.ролиToolStripMenuItem.Text = "Роли";
             this.ролиToolStripMenuItem.Click += new System.EventHandler(this.ролиToolStripMenuItem_Click);
+            // 
+            // фильмЖанрыToolStripMenuItem
+            // 
+            this.фильмЖанрыToolStripMenuItem.Name = "фильмЖанрыToolStripMenuItem";
+            this.фильмЖанрыToolStripMenuItem.Size = new System.Drawing.Size(213, 28);
+            this.фильмЖанрыToolStripMenuItem.Text = "Фильм_Жанры";
+            this.фильмЖанрыToolStripMenuItem.Click += new System.EventHandler(this.фильмЖанрыToolStripMenuItem_Click);
+            // 
+            // фильмСтраныToolStripMenuItem
+            // 
+            this.фильмСтраныToolStripMenuItem.Name = "фильмСтраныToolStripMenuItem";
+            this.фильмСтраныToolStripMenuItem.Size = new System.Drawing.Size(213, 28);
+            this.фильмСтраныToolStripMenuItem.Text = "Фильм_Страны";
+            this.фильмСтраныToolStripMenuItem.Click += new System.EventHandler(this.фильмСтраныToolStripMenuItem_Click);
             // 
             // билетыToolStripMenuItem1
             // 
@@ -279,7 +303,7 @@
             this.toolStripStatusLabel1});
             this.statusStrip1.Location = new System.Drawing.Point(0, 727);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1233, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1246, 22);
             this.statusStrip1.TabIndex = 5;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -312,9 +336,18 @@
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1233, 25);
+            this.bindingNavigator1.Size = new System.Drawing.Size(1246, 25);
             this.bindingNavigator1.TabIndex = 6;
             this.bindingNavigator1.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Добавить";
             // 
             // bindingNavigatorCountItem
             // 
@@ -322,6 +355,33 @@
             this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
             this.bindingNavigatorCountItem.Text = "для {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Удалить";
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Text = "Переместить в начало";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Text = "Переместить назад";
             // 
             // bindingNavigatorSeparator
             // 
@@ -343,6 +403,24 @@
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
+            // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
@@ -351,23 +429,23 @@
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(212)))), ((int)(((byte)(119)))));
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(212)))), ((int)(((byte)(119)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(212)))), ((int)(((byte)(119)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.Color.White;
             this.dataGridView1.Location = new System.Drawing.Point(12, 63);
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(212)))), ((int)(((byte)(119)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(212)))), ((int)(((byte)(119)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowTemplate.DefaultCellStyle.NullValue = null;
             this.dataGridView1.Size = new System.Drawing.Size(1214, 584);
             this.dataGridView1.TabIndex = 4;
@@ -415,67 +493,94 @@
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Добавить";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Удалить";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Переместить в начало";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Переместить назад";
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
-            // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(648, 5);
+            this.dateTimePicker1.Font = new System.Drawing.Font("Bahnschrift Light", 10.75F);
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(652, 7);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 30);
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 25);
             this.dateTimePicker1.TabIndex = 12;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataSource = this.cinemaDataSet;
+            this.bindingSource1.Position = 0;
+            // 
+            // bookingsBindingSource
+            // 
+            this.bookingsBindingSource.DataMember = "bookings";
+            this.bookingsBindingSource.DataSource = this.cinemaDataSet;
+            // 
+            // countriesBindingSource
+            // 
+            this.countriesBindingSource.DataMember = "countries";
+            this.countriesBindingSource.DataSource = this.cinemaDataSet;
+            // 
+            // genresBindingSource
+            // 
+            this.genresBindingSource.DataMember = "genres";
+            this.genresBindingSource.DataSource = this.cinemaDataSet;
+            // 
+            // moviesBindingSource
+            // 
+            this.moviesBindingSource.DataMember = "movies";
+            this.moviesBindingSource.DataSource = this.cinemaDataSet;
+            // 
+            // rolesBindingSource
+            // 
+            this.rolesBindingSource.DataMember = "roles";
+            this.rolesBindingSource.DataSource = this.cinemaDataSet;
+            // 
+            // moviesViewBindingSource
+            // 
+            this.moviesViewBindingSource.DataMember = "moviesView";
+            this.moviesViewBindingSource.DataSource = this.cinemaDataSet;
+            // 
+            // seatsBindingSource
+            // 
+            this.seatsBindingSource.DataMember = "seats";
+            this.seatsBindingSource.DataSource = this.cinemaDataSet;
+            // 
+            // showsBindingSource
+            // 
+            this.showsBindingSource.DataMember = "shows";
+            this.showsBindingSource.DataSource = this.cinemaDataSet;
+            // 
+            // showsViewBindingSource
+            // 
+            this.showsViewBindingSource.DataMember = "showsView";
+            this.showsViewBindingSource.DataSource = this.cinemaDataSet;
+            // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataMember = "users";
+            this.usersBindingSource.DataSource = this.cinemaDataSet;
+            // 
+            // movie_countriesBindingSource
+            // 
+            this.movie_countriesBindingSource.DataSource = this.cinemaDataSet;
+            this.movie_countriesBindingSource.Position = 0;
+            // 
+            // ticketsBindingSource
+            // 
+            this.ticketsBindingSource.DataMember = "tickets";
+            this.ticketsBindingSource.DataSource = this.cinemaDataSet;
+            // 
+            // ticketsViewBindingSource
+            // 
+            this.ticketsViewBindingSource.DataMember = "ticketsView";
+            this.ticketsViewBindingSource.DataSource = this.cinemaDataSet;
+            // 
+            // ticketsViewTableAdapter
+            // 
+            this.ticketsViewTableAdapter.ClearBeforeFill = true;
+            // 
+            // movie_genresBindingSource
+            // 
+            this.movie_genresBindingSource.DataMember = "movie_genres";
+            this.movie_genresBindingSource.DataSource = this.cinemaDataSet;
             // 
             // cinemaDataSet
             // 
@@ -489,137 +594,74 @@
             this.tableAdapterManager.Connection = null;
             this.tableAdapterManager.countriesTableAdapter = null;
             this.tableAdapterManager.genresTableAdapter = null;
+            this.tableAdapterManager.movie_countriesTableAdapter = null;
+            this.tableAdapterManager.movie_genresTableAdapter = null;
             this.tableAdapterManager.moviesTableAdapter = null;
             this.tableAdapterManager.rolesTableAdapter = null;
             this.tableAdapterManager.seatsTableAdapter = null;
             this.tableAdapterManager.showsTableAdapter = null;
-            this.tableAdapterManager.tickets1TableAdapter = null;
-            this.tableAdapterManager.tickets2TableAdapter = null;
-            this.tableAdapterManager.tickets3TableAdapter = null;
-            this.tableAdapterManager.tickets4TableAdapter = null;
             this.tableAdapterManager.ticketsTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = WindowsFormsApp2.cinemaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.usersTableAdapter = null;
-            // 
-            // bindingSource1
-            // 
-            this.bindingSource1.DataSource = this.cinemaDataSet;
-            this.bindingSource1.Position = 0;
-            // 
-            // bookingsBindingSource
-            // 
-            this.bookingsBindingSource.DataMember = "bookings";
-            this.bookingsBindingSource.DataSource = this.cinemaDataSet;
             // 
             // bookingsTableAdapter
             // 
             this.bookingsTableAdapter.ClearBeforeFill = true;
             // 
-            // countriesBindingSource
-            // 
-            this.countriesBindingSource.DataMember = "countries";
-            this.countriesBindingSource.DataSource = this.cinemaDataSet;
-            // 
             // countriesTableAdapter
             // 
             this.countriesTableAdapter.ClearBeforeFill = true;
-            // 
-            // genresBindingSource
-            // 
-            this.genresBindingSource.DataMember = "genres";
-            this.genresBindingSource.DataSource = this.cinemaDataSet;
             // 
             // genresTableAdapter
             // 
             this.genresTableAdapter.ClearBeforeFill = true;
             // 
-            // moviesBindingSource
-            // 
-            this.moviesBindingSource.DataMember = "movies";
-            this.moviesBindingSource.DataSource = this.cinemaDataSet;
-            // 
             // moviesTableAdapter
             // 
             this.moviesTableAdapter.ClearBeforeFill = true;
-            // 
-            // rolesBindingSource
-            // 
-            this.rolesBindingSource.DataMember = "roles";
-            this.rolesBindingSource.DataSource = this.cinemaDataSet;
             // 
             // rolesTableAdapter
             // 
             this.rolesTableAdapter.ClearBeforeFill = true;
             // 
-            // moviesViewBindingSource
-            // 
-            this.moviesViewBindingSource.DataMember = "moviesView";
-            this.moviesViewBindingSource.DataSource = this.cinemaDataSet;
-            // 
             // moviesViewTableAdapter
             // 
             this.moviesViewTableAdapter.ClearBeforeFill = true;
-            // 
-            // seatsBindingSource
-            // 
-            this.seatsBindingSource.DataMember = "seats";
-            this.seatsBindingSource.DataSource = this.cinemaDataSet;
             // 
             // seatsTableAdapter
             // 
             this.seatsTableAdapter.ClearBeforeFill = true;
             // 
-            // showsBindingSource
-            // 
-            this.showsBindingSource.DataMember = "shows";
-            this.showsBindingSource.DataSource = this.cinemaDataSet;
-            // 
             // showsTableAdapter
             // 
             this.showsTableAdapter.ClearBeforeFill = true;
-            // 
-            // showsViewBindingSource
-            // 
-            this.showsViewBindingSource.DataMember = "showsView";
-            this.showsViewBindingSource.DataSource = this.cinemaDataSet;
             // 
             // showsViewTableAdapter
             // 
             this.showsViewTableAdapter.ClearBeforeFill = true;
             // 
-            // tickets3BindingSource
-            // 
-            this.tickets3BindingSource.DataMember = "tickets3";
-            this.tickets3BindingSource.DataSource = this.cinemaDataSet;
-            // 
-            // usersBindingSource
-            // 
-            this.usersBindingSource.DataMember = "users";
-            this.usersBindingSource.DataSource = this.cinemaDataSet;
-            // 
-            // tickets3TableAdapter
-            // 
-            this.tickets3TableAdapter.ClearBeforeFill = true;
-            // 
             // usersTableAdapter
             // 
             this.usersTableAdapter.ClearBeforeFill = true;
             // 
-            // ticketsView2TableAdapter
+            // movie_countriesTableAdapter
             // 
-            this.ticketsView2TableAdapter.ClearBeforeFill = true;
+            this.movie_countriesTableAdapter.ClearBeforeFill = true;
             // 
-            // ticketsView2BindingSource1
+            // ticketsTableAdapter
             // 
-            this.ticketsView2BindingSource1.DataMember = "ticketsView2";
-            this.ticketsView2BindingSource1.DataSource = this.cinemaDataSet;
+            this.ticketsTableAdapter.ClearBeforeFill = true;
+            // 
+            // movie_genresTableAdapter
+            // 
+            this.movie_genresTableAdapter.ClearBeforeFill = true;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1233, 749);
+            this.ClientSize = new System.Drawing.Size(1246, 749);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.del);
             this.Controls.Add(this.pictureBox1);
@@ -649,7 +691,6 @@
             this.bindingNavigator1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cinemaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.countriesBindingSource)).EndInit();
@@ -660,9 +701,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.seatsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.showsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.showsViewBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tickets3BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ticketsView2BindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.movie_countriesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ticketsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ticketsViewBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.movie_genresBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cinemaDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -724,16 +768,24 @@
         private cinemaDataSetTableAdapters.showsTableAdapter showsTableAdapter;
         private System.Windows.Forms.BindingSource showsViewBindingSource;
         private cinemaDataSetTableAdapters.showsViewTableAdapter showsViewTableAdapter;
-        private System.Windows.Forms.BindingSource tickets3BindingSource;
-        private cinemaDataSetTableAdapters.tickets3TableAdapter tickets3TableAdapter;
+        //private System.Windows.Forms.BindingSource tickets3BindingSource;
         private System.Windows.Forms.BindingSource usersBindingSource;
         private cinemaDataSetTableAdapters.usersTableAdapter usersTableAdapter;
-        private cinemaDataSetTableAdapters.ticketsView2TableAdapter ticketsView2TableAdapter;
         private System.Windows.Forms.ToolStripMenuItem местаToolStripMenuItem;
-        private System.Windows.Forms.BindingSource ticketsView2BindingSource1;
+       // private System.Windows.Forms.BindingSource ticketsView2BindingSource1;
         private System.Windows.Forms.Button del;
         private System.Windows.Forms.ToolStripMenuItem ролиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem сформироватьОтчетОПроданныхБилетахToolStripMenuItem;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ToolStripMenuItem фильмЖанрыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem фильмСтраныToolStripMenuItem;
+        private System.Windows.Forms.BindingSource movie_countriesBindingSource;
+        private cinemaDataSetTableAdapters.movie_countriesTableAdapter movie_countriesTableAdapter;
+        private System.Windows.Forms.BindingSource ticketsBindingSource;
+        private cinemaDataSetTableAdapters.ticketsTableAdapter ticketsTableAdapter;
+        private System.Windows.Forms.BindingSource ticketsViewBindingSource;
+        private cinemaDataSetTableAdapters.ticketsViewTableAdapter ticketsViewTableAdapter;
+        private System.Windows.Forms.BindingSource movie_genresBindingSource;
+        private cinemaDataSetTableAdapters.movie_genresTableAdapter movie_genresTableAdapter;
     }
 }
