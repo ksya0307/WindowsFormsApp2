@@ -47,7 +47,6 @@
             this.openbookings = new System.Windows.Forms.Button();
             this.scheduleViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cinemaDataSet = new WindowsFormsApp2.cinemaDataSet();
-            this.scheduleViewTableAdapter = new WindowsFormsApp2.cinemaDataSetTableAdapters.scheduleViewTableAdapter();
             this.tableAdapterManager = new WindowsFormsApp2.cinemaDataSetTableAdapters.TableAdapterManager();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
@@ -235,10 +234,6 @@
             this.cinemaDataSet.DataSetName = "cinemaDataSet";
             this.cinemaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // scheduleViewTableAdapter
-            // 
-            this.scheduleViewTableAdapter.ClearBeforeFill = true;
-            // 
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
@@ -301,7 +296,6 @@
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private cinemaDataSet cinemaDataSet;
         private System.Windows.Forms.BindingSource scheduleViewBindingSource;
-        private cinemaDataSetTableAdapters.scheduleViewTableAdapter scheduleViewTableAdapter;
         private cinemaDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.PictureBox pictureBox1;

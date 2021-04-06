@@ -143,6 +143,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>cinemaDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="CountTickets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CountTickets.Designer.cs">
+      <DependentUpon>CountTickets.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -247,11 +253,14 @@
       <DependentUpon>buybook.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="CountTickets.rdlc" />
+    <EmbeddedResource Include="CountTickets.resx">
+      <DependentUpon>CountTickets.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportboutbuytickets.rdlc" />
     <EmbeddedResource Include="reportbuytick.resx">
       <DependentUpon>reportbuytick.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="reportDiagrammMovieCount.rdlc" />
     <EmbeddedResource Include="sales.rdlc" />
     <EmbeddedResource Include="ticket.rdlc" />
     <EmbeddedResource Include="Form1.resx">

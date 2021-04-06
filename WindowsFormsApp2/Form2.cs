@@ -27,6 +27,13 @@ namespace WindowsFormsApp2
         }
         private void Form2_Load(object sender, EventArgs e)
         {
+
+            start_date.Format = DateTimePickerFormat.Custom;
+            start_date.CustomFormat = "dd/MM/yyyy";
+
+            end_date.Format = DateTimePickerFormat.Custom;
+            end_date.CustomFormat = "dd/MM/yyyy";
+
             this.cinemaDataSet.EnforceConstraints = false;
    
             this.showsViewTableAdapter.Fill(this.cinemaDataSet.showsView);
@@ -589,13 +596,12 @@ namespace WindowsFormsApp2
 
         private void сформироватьОтчетОПроданныхБилетахToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            reportbuytick reportbuytick = new reportbuytick(getdate);
-            reportbuytick.ShowDialog();
+         
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-           getdate = dateTimePicker1.Value.ToString("yyyy-MM-dd");
+           getdate = start_date.Value.ToString("yyyy-MM-dd");
         }
 
         private void фильмЖанрыToolStripMenuItem_Click(object sender, EventArgs e)
@@ -647,6 +653,19 @@ namespace WindowsFormsApp2
                 dataGridView1.Rows[i].Height = 30;
             }
 
+        }
+
+        private void проданныеБилетыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            reportbuytick reportbuytick = new reportbuytick(getdate);
+            reportbuytick.ShowDialog();
+        }
+
+        private void купленныеБилетыЗаПериодToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine(start_date.Value);
+            CountTickets count = new CountTickets(start_date.Value.ToString("dd/MM/yyyy"),end_date.Value.ToString("dd/MM/yyyy"));
+            count.Show();
         }
     }
 }

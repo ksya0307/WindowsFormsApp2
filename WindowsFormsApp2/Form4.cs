@@ -34,7 +34,7 @@ namespace WindowsFormsApp2
             book.Visible = false;
             buy.Visible = false;
 
-            this.scheduleViewTableAdapter.Fill(this.cinemaDataSet.scheduleView);
+            //this.scheduleViewTableAdapter.Fill(this.cinemaDataSet.scheduleView);
             
             con.Open();
             cmd = new SqlCommand("select last_name, name from users where login='" + loginuser + "'", con);

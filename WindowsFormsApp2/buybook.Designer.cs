@@ -34,22 +34,22 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(buybook));
             this.customers_bookDataGridView = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.датаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.фильмDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.форматDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.времяНачалаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.рядDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.местоDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.стоимостьDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookingIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customersbookBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cinemaDataSet = new WindowsFormsApp2.cinemaDataSet();
             this.buybooking = new System.Windows.Forms.Button();
-            this.customers_bookTableAdapter = new WindowsFormsApp2.cinemaDataSetTableAdapters.customers_bookTableAdapter();
+            this.get_bookingBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.get_bookingTableAdapter = new WindowsFormsApp2.cinemaDataSetTableAdapters.get_bookingTableAdapter();
+            this.tableAdapterManager = new WindowsFormsApp2.cinemaDataSetTableAdapters.TableAdapterManager();
+            this.movieDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rowDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.starttimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.formatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.zalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.customers_bookDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customersbookBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cinemaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.get_bookingBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // customers_bookDataGridView
@@ -70,16 +70,15 @@
             this.customers_bookDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.customers_bookDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.customers_bookDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.датаDataGridViewTextBoxColumn,
-            this.фильмDataGridViewTextBoxColumn,
-            this.форматDataGridViewTextBoxColumn,
-            this.времяНачалаDataGridViewTextBoxColumn,
-            this.рядDataGridViewTextBoxColumn,
-            this.местоDataGridViewTextBoxColumn,
-            this.стоимостьDataGridViewTextBoxColumn,
-            this.bookingIDDataGridViewTextBoxColumn});
-            this.customers_bookDataGridView.DataSource = this.customersbookBindingSource;
+            this.movieDataGridViewTextBoxColumn,
+            this.rowDataGridViewTextBoxColumn,
+            this.numberDataGridViewTextBoxColumn,
+            this.starttimeDataGridViewTextBoxColumn,
+            this.dateDataGridViewTextBoxColumn,
+            this.formatDataGridViewTextBoxColumn,
+            this.costDataGridViewTextBoxColumn,
+            this.zalDataGridViewTextBoxColumn});
+            this.customers_bookDataGridView.DataSource = this.get_bookingBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -103,78 +102,6 @@
             this.customers_bookDataGridView.TabIndex = 2;
             this.customers_bookDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.customers_bookDataGridView_CellClick);
             // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.idDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // датаDataGridViewTextBoxColumn
-            // 
-            this.датаDataGridViewTextBoxColumn.DataPropertyName = "Дата";
-            this.датаDataGridViewTextBoxColumn.HeaderText = "Дата";
-            this.датаDataGridViewTextBoxColumn.Name = "датаDataGridViewTextBoxColumn";
-            this.датаDataGridViewTextBoxColumn.ReadOnly = true;
-            this.датаDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // фильмDataGridViewTextBoxColumn
-            // 
-            this.фильмDataGridViewTextBoxColumn.DataPropertyName = "Фильм";
-            this.фильмDataGridViewTextBoxColumn.HeaderText = "Фильм";
-            this.фильмDataGridViewTextBoxColumn.Name = "фильмDataGridViewTextBoxColumn";
-            this.фильмDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // форматDataGridViewTextBoxColumn
-            // 
-            this.форматDataGridViewTextBoxColumn.DataPropertyName = "Формат";
-            this.форматDataGridViewTextBoxColumn.HeaderText = "Формат";
-            this.форматDataGridViewTextBoxColumn.Name = "форматDataGridViewTextBoxColumn";
-            this.форматDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // времяНачалаDataGridViewTextBoxColumn
-            // 
-            this.времяНачалаDataGridViewTextBoxColumn.DataPropertyName = "Время начала";
-            this.времяНачалаDataGridViewTextBoxColumn.HeaderText = "Время начала";
-            this.времяНачалаDataGridViewTextBoxColumn.Name = "времяНачалаDataGridViewTextBoxColumn";
-            this.времяНачалаDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // рядDataGridViewTextBoxColumn
-            // 
-            this.рядDataGridViewTextBoxColumn.DataPropertyName = "Ряд";
-            this.рядDataGridViewTextBoxColumn.HeaderText = "Ряд";
-            this.рядDataGridViewTextBoxColumn.Name = "рядDataGridViewTextBoxColumn";
-            this.рядDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // местоDataGridViewTextBoxColumn
-            // 
-            this.местоDataGridViewTextBoxColumn.DataPropertyName = "Место";
-            this.местоDataGridViewTextBoxColumn.HeaderText = "Место";
-            this.местоDataGridViewTextBoxColumn.Name = "местоDataGridViewTextBoxColumn";
-            this.местоDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // стоимостьDataGridViewTextBoxColumn
-            // 
-            this.стоимостьDataGridViewTextBoxColumn.DataPropertyName = "Стоимость";
-            this.стоимостьDataGridViewTextBoxColumn.HeaderText = "Стоимость";
-            this.стоимостьDataGridViewTextBoxColumn.Name = "стоимостьDataGridViewTextBoxColumn";
-            this.стоимостьDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // bookingIDDataGridViewTextBoxColumn
-            // 
-            this.bookingIDDataGridViewTextBoxColumn.DataPropertyName = "bookingID";
-            this.bookingIDDataGridViewTextBoxColumn.HeaderText = "bookingID";
-            this.bookingIDDataGridViewTextBoxColumn.Name = "bookingIDDataGridViewTextBoxColumn";
-            this.bookingIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.bookingIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // customersbookBindingSource
-            // 
-            this.customersbookBindingSource.DataMember = "customers_book";
-            this.customersbookBindingSource.DataSource = this.cinemaDataSet;
-            // 
             // cinemaDataSet
             // 
             this.cinemaDataSet.DataSetName = "cinemaDataSet";
@@ -196,9 +123,87 @@
             this.buybooking.UseVisualStyleBackColor = false;
             this.buybooking.Click += new System.EventHandler(this.buybooking_Click);
             // 
-            // customers_bookTableAdapter
+            // get_bookingBindingSource
             // 
-            this.customers_bookTableAdapter.ClearBeforeFill = true;
+            this.get_bookingBindingSource.DataMember = "get_booking";
+            this.get_bookingBindingSource.DataSource = this.cinemaDataSet;
+            // 
+            // get_bookingTableAdapter
+            // 
+            this.get_bookingTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.bookingsTableAdapter = null;
+            this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.countriesTableAdapter = null;
+            this.tableAdapterManager.genresTableAdapter = null;
+            this.tableAdapterManager.movie_countriesTableAdapter = null;
+            this.tableAdapterManager.movie_genresTableAdapter = null;
+            this.tableAdapterManager.moviesTableAdapter = null;
+            this.tableAdapterManager.rolesTableAdapter = null;
+            this.tableAdapterManager.seatsTableAdapter = null;
+            this.tableAdapterManager.showsTableAdapter = null;
+            this.tableAdapterManager.ticketsTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = WindowsFormsApp2.cinemaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.usersTableAdapter = null;
+            // 
+            // movieDataGridViewTextBoxColumn
+            // 
+            this.movieDataGridViewTextBoxColumn.DataPropertyName = "movie";
+            this.movieDataGridViewTextBoxColumn.HeaderText = "movie";
+            this.movieDataGridViewTextBoxColumn.Name = "movieDataGridViewTextBoxColumn";
+            this.movieDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rowDataGridViewTextBoxColumn
+            // 
+            this.rowDataGridViewTextBoxColumn.DataPropertyName = "row";
+            this.rowDataGridViewTextBoxColumn.HeaderText = "row";
+            this.rowDataGridViewTextBoxColumn.Name = "rowDataGridViewTextBoxColumn";
+            this.rowDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // numberDataGridViewTextBoxColumn
+            // 
+            this.numberDataGridViewTextBoxColumn.DataPropertyName = "number";
+            this.numberDataGridViewTextBoxColumn.HeaderText = "number";
+            this.numberDataGridViewTextBoxColumn.Name = "numberDataGridViewTextBoxColumn";
+            this.numberDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // starttimeDataGridViewTextBoxColumn
+            // 
+            this.starttimeDataGridViewTextBoxColumn.DataPropertyName = "start_time";
+            this.starttimeDataGridViewTextBoxColumn.HeaderText = "start_time";
+            this.starttimeDataGridViewTextBoxColumn.Name = "starttimeDataGridViewTextBoxColumn";
+            this.starttimeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dateDataGridViewTextBoxColumn
+            // 
+            this.dateDataGridViewTextBoxColumn.DataPropertyName = "date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "date";
+            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // formatDataGridViewTextBoxColumn
+            // 
+            this.formatDataGridViewTextBoxColumn.DataPropertyName = "format";
+            this.formatDataGridViewTextBoxColumn.HeaderText = "format";
+            this.formatDataGridViewTextBoxColumn.Name = "formatDataGridViewTextBoxColumn";
+            this.formatDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // costDataGridViewTextBoxColumn
+            // 
+            this.costDataGridViewTextBoxColumn.DataPropertyName = "cost";
+            this.costDataGridViewTextBoxColumn.HeaderText = "cost";
+            this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
+            this.costDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // zalDataGridViewTextBoxColumn
+            // 
+            this.zalDataGridViewTextBoxColumn.DataPropertyName = "zal";
+            this.zalDataGridViewTextBoxColumn.HeaderText = "zal";
+            this.zalDataGridViewTextBoxColumn.Name = "zalDataGridViewTextBoxColumn";
+            this.zalDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // buybook
             // 
@@ -214,8 +219,8 @@
             this.Text = "Выкуп брони";
             this.Load += new System.EventHandler(this.buybook_Load);
             ((System.ComponentModel.ISupportInitialize)(this.customers_bookDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customersbookBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cinemaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.get_bookingBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -225,16 +230,16 @@
         private cinemaDataSet cinemaDataSet;
         private System.Windows.Forms.DataGridView customers_bookDataGridView;
         private System.Windows.Forms.Button buybooking;
-        private System.Windows.Forms.BindingSource customersbookBindingSource;
-        private cinemaDataSetTableAdapters.customers_bookTableAdapter customers_bookTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn датаDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn фильмDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn форматDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn времяНачалаDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn рядDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn местоDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn стоимостьDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bookingIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource get_bookingBindingSource;
+        private cinemaDataSetTableAdapters.get_bookingTableAdapter get_bookingTableAdapter;
+        private cinemaDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.DataGridViewTextBoxColumn movieDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rowDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn starttimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn formatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn costDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn zalDataGridViewTextBoxColumn;
     }
 }

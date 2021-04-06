@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.таблицыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.пользователиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,6 +49,8 @@
             this.фильмыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сеансыToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.сформироватьОтчетОПроданныхБилетахToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.купленныеБилетыЗаПериодToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.проданныеБилетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.exit = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -69,8 +71,9 @@
             this.change_tb = new System.Windows.Forms.Button();
             this.add = new System.Windows.Forms.Button();
             this.del = new System.Windows.Forms.Button();
+            this.start_date = new System.Windows.Forms.DateTimePicker();
+            this.end_date = new System.Windows.Forms.DateTimePicker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.cinemaDataSet = new WindowsFormsApp2.cinemaDataSet();
             this.bookingsBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -265,11 +268,28 @@
             // 
             // сформироватьОтчетОПроданныхБилетахToolStripMenuItem
             // 
+            this.сформироватьОтчетОПроданныхБилетахToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.купленныеБилетыЗаПериодToolStripMenuItem,
+            this.проданныеБилетыToolStripMenuItem});
             this.сформироватьОтчетОПроданныхБилетахToolStripMenuItem.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.сформироватьОтчетОПроданныхБилетахToolStripMenuItem.Name = "сформироватьОтчетОПроданныхБилетахToolStripMenuItem";
-            this.сформироватьОтчетОПроданныхБилетахToolStripMenuItem.Size = new System.Drawing.Size(266, 27);
-            this.сформироватьОтчетОПроданныхБилетахToolStripMenuItem.Text = "отчет о проданных билетах";
+            this.сформироватьОтчетОПроданныхБилетахToolStripMenuItem.Size = new System.Drawing.Size(87, 27);
+            this.сформироватьОтчетОПроданныхБилетахToolStripMenuItem.Text = "Отчёты";
             this.сформироватьОтчетОПроданныхБилетахToolStripMenuItem.Click += new System.EventHandler(this.сформироватьОтчетОПроданныхБилетахToolStripMenuItem_Click);
+            // 
+            // купленныеБилетыЗаПериодToolStripMenuItem
+            // 
+            this.купленныеБилетыЗаПериодToolStripMenuItem.Name = "купленныеБилетыЗаПериодToolStripMenuItem";
+            this.купленныеБилетыЗаПериодToolStripMenuItem.Size = new System.Drawing.Size(340, 28);
+            this.купленныеБилетыЗаПериодToolStripMenuItem.Text = "Купленные билеты за период";
+            this.купленныеБилетыЗаПериодToolStripMenuItem.Click += new System.EventHandler(this.купленныеБилетыЗаПериодToolStripMenuItem_Click);
+            // 
+            // проданныеБилетыToolStripMenuItem
+            // 
+            this.проданныеБилетыToolStripMenuItem.Name = "проданныеБилетыToolStripMenuItem";
+            this.проданныеБилетыToolStripMenuItem.Size = new System.Drawing.Size(340, 28);
+            this.проданныеБилетыToolStripMenuItem.Text = "Проданные билеты";
+            this.проданныеБилетыToolStripMenuItem.Click += new System.EventHandler(this.проданныеБилетыToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -429,23 +449,23 @@
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(212)))), ((int)(((byte)(119)))));
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(212)))), ((int)(((byte)(119)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(212)))), ((int)(((byte)(119)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.Color.White;
             this.dataGridView1.Location = new System.Drawing.Point(12, 63);
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(212)))), ((int)(((byte)(119)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(212)))), ((int)(((byte)(119)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowTemplate.DefaultCellStyle.NullValue = null;
             this.dataGridView1.Size = new System.Drawing.Size(1214, 584);
             this.dataGridView1.TabIndex = 4;
@@ -483,6 +503,27 @@
             this.del.Visible = false;
             this.del.Click += new System.EventHandler(this.del_Click);
             // 
+            // start_date
+            // 
+            this.start_date.CustomFormat = "\"dd/MM/yyyy\"";
+            this.start_date.Font = new System.Drawing.Font("Bahnschrift Light", 10.75F);
+            this.start_date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.start_date.Location = new System.Drawing.Point(497, 5);
+            this.start_date.Name = "start_date";
+            this.start_date.Size = new System.Drawing.Size(139, 25);
+            this.start_date.TabIndex = 12;
+            this.start_date.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // end_date
+            // 
+            this.end_date.CalendarFont = new System.Drawing.Font("Bahnschrift Light", 10.75F);
+            this.end_date.Font = new System.Drawing.Font("Bahnschrift Light", 10.75F);
+            this.end_date.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.end_date.Location = new System.Drawing.Point(497, 32);
+            this.end_date.Name = "end_date";
+            this.end_date.Size = new System.Drawing.Size(139, 25);
+            this.end_date.TabIndex = 13;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::WindowsFormsApp2.Properties.Resources.main;
@@ -492,16 +533,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Bahnschrift Light", 10.75F);
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(652, 7);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 25);
-            this.dateTimePicker1.TabIndex = 12;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // bindingSource1
             // 
@@ -662,7 +693,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1246, 749);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.end_date);
+            this.Controls.Add(this.start_date);
             this.Controls.Add(this.del);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.add);
@@ -776,7 +808,7 @@
         private System.Windows.Forms.Button del;
         private System.Windows.Forms.ToolStripMenuItem ролиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem сформироватьОтчетОПроданныхБилетахToolStripMenuItem;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker start_date;
         private System.Windows.Forms.ToolStripMenuItem фильмЖанрыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem фильмСтраныToolStripMenuItem;
         private System.Windows.Forms.BindingSource movie_countriesBindingSource;
@@ -787,5 +819,8 @@
         private cinemaDataSetTableAdapters.ticketsViewTableAdapter ticketsViewTableAdapter;
         private System.Windows.Forms.BindingSource movie_genresBindingSource;
         private cinemaDataSetTableAdapters.movie_genresTableAdapter movie_genresTableAdapter;
+        private System.Windows.Forms.ToolStripMenuItem купленныеБилетыЗаПериодToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem проданныеБилетыToolStripMenuItem;
+        private System.Windows.Forms.DateTimePicker end_date;
     }
 }

@@ -26,7 +26,7 @@ namespace WindowsFormsApp2
         private void buybook_Load(object sender, EventArgs e)
         {
             this.cinemaDataSet.EnforceConstraints = false;
-            this.customers_bookTableAdapter.Fill(this.cinemaDataSet.customers_book, id_user);
+           // this.customers_bookTableAdapter.Fill(this.cinemaDataSet.customers_book, id_user);
             customers_bookDataGridView.AutoResizeColumns();
             for (int i = 0; i < customers_bookDataGridView.Rows.Count; i++)
             {
@@ -80,8 +80,8 @@ namespace WindowsFormsApp2
             cmd.Dispose();
             con.Close();
 
-            customersbookBindingSource.RemoveCurrent();
-            customers_bookDataGridView.DataSource = customersbookBindingSource;
+            get_bookingBindingSource.RemoveCurrent();
+            customers_bookDataGridView.DataSource = get_bookingBindingSource;
             MessageBox.Show("ВЫ ПРИОБРЕЛИ БИЛЕТ!\n\nСпасибо, что выбрали нас!\nПриятного просмотра! ", "Уведомление", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
