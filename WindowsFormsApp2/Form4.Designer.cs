@@ -45,14 +45,15 @@
             this.book = new System.Windows.Forms.Button();
             this.buy = new System.Windows.Forms.Button();
             this.openbookings = new System.Windows.Forms.Button();
-            this.scheduleViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cinemaDataSet = new WindowsFormsApp2.cinemaDataSet();
             this.tableAdapterManager = new WindowsFormsApp2.cinemaDataSetTableAdapters.TableAdapterManager();
+            this.scheduleViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.scheduleViewTableAdapter = new WindowsFormsApp2.cinemaDataSetTableAdapters.scheduleViewTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.scheduleViewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cinemaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scheduleViewBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // exit
@@ -224,11 +225,6 @@
             this.openbookings.UseVisualStyleBackColor = false;
             this.openbookings.Click += new System.EventHandler(this.openbookings_Click);
             // 
-            // scheduleViewBindingSource
-            // 
-            this.scheduleViewBindingSource.DataMember = "scheduleView";
-            this.scheduleViewBindingSource.DataSource = this.cinemaDataSet;
-            // 
             // cinemaDataSet
             // 
             this.cinemaDataSet.DataSetName = "cinemaDataSet";
@@ -251,12 +247,21 @@
             this.tableAdapterManager.UpdateOrder = WindowsFormsApp2.cinemaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.usersTableAdapter = null;
             // 
+            // scheduleViewBindingSource
+            // 
+            this.scheduleViewBindingSource.DataMember = "scheduleView";
+            this.scheduleViewBindingSource.DataSource = this.cinemaDataSet;
+            // 
+            // scheduleViewTableAdapter
+            // 
+            this.scheduleViewTableAdapter.ClearBeforeFill = true;
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1216, 570);
+            this.ClientSize = new System.Drawing.Size(1224, 629);
             this.Controls.Add(this.openbookings);
             this.Controls.Add(this.buy);
             this.Controls.Add(this.book);
@@ -278,8 +283,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.scheduleViewBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cinemaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scheduleViewBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,12 +300,13 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private cinemaDataSet cinemaDataSet;
-        private System.Windows.Forms.BindingSource scheduleViewBindingSource;
         private cinemaDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button book;
         private System.Windows.Forms.Button buy;
         private System.Windows.Forms.Button openbookings;
+        private System.Windows.Forms.BindingSource scheduleViewBindingSource;
+        private cinemaDataSetTableAdapters.scheduleViewTableAdapter scheduleViewTableAdapter;
     }
 }

@@ -27,7 +27,7 @@ namespace WindowsFormsApp2
         }
         private void Form2_Load(object sender, EventArgs e)
         {
-
+            this.cinemaDataSet.EnforceConstraints = false;
             start_date.Format = DateTimePickerFormat.Custom;
             start_date.CustomFormat = "dd/MM/yyyy";
 
@@ -666,6 +666,25 @@ namespace WindowsFormsApp2
             Console.WriteLine(start_date.Value);
             CountTickets count = new CountTickets(start_date.Value.ToString("dd/MM/yyyy"),end_date.Value.ToString("dd/MM/yyyy"));
             count.Show();
+        }
+
+        private void Найти_Click(object sender, EventArgs e)
+        {
+            for(int i = 0;i < dataGridView1.RowCount; i++)
+            {
+                dataGridView1.Rows[i].Selected = false;
+                for(int j = 0; j < dataGridView1.ColumnCount; j++)
+                {
+                    if (dataGridView1.Rows[i].Cells[j].Value != null)
+                    {
+                        if (dataGridView1.Rows[i].Cells[j].Value.ToString().Contains(textBox1.Text))
+                        {
+                            dataGridView1.Rows[i].Selected = true;
+                            break;
+                        }
+                    }
+                }
+            }
         }
     }
 }

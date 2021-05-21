@@ -18,6 +18,9 @@ namespace WindowsFormsApp2
         int id_user;
         int idshow;
         int idbooking;
+
+        SqlConnection con = new SqlConnection(Properties.Settings.Default.con);
+        SqlCommand cmd;
         public buybook(int iduser)
         {
             id_user = iduser;
@@ -26,7 +29,9 @@ namespace WindowsFormsApp2
         private void buybook_Load(object sender, EventArgs e)
         {
             this.cinemaDataSet.EnforceConstraints = false;
-           // this.customers_bookTableAdapter.Fill(this.cinemaDataSet.customers_book, id_user);
+            this.get_bookingTableAdapter.Fill(this.cinemaDataSet.get_booking, id_user);
+            customers_bookDataGridView.Columns["datagridviewtextboxcolumn9"].Visible = false;
+            customers_bookDataGridView.Columns["idBook"].Visible = false;
             customers_bookDataGridView.AutoResizeColumns();
             for (int i = 0; i < customers_bookDataGridView.Rows.Count; i++)
             {
@@ -38,21 +43,22 @@ namespace WindowsFormsApp2
         private void customers_bookDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             buybooking.Enabled = true;
+            canselbooking.Enabled = true;
             if (customers_bookDataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {
                 customers_bookDataGridView.CurrentRow.Selected = true;
-                string show = customers_bookDataGridView.Rows[e.RowIndex].Cells["idDataGridViewTextBoxColumn"].FormattedValue.ToString();
+                string show = customers_bookDataGridView.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn9"].FormattedValue.ToString();
                 idshow = Convert.ToInt32(show);
-                string booking = customers_bookDataGridView.Rows[e.RowIndex].Cells["bookingIDDataGridViewTextBoxColumn"].FormattedValue.ToString();
+                string booking = customers_bookDataGridView.Rows[e.RowIndex].Cells["idBook"].FormattedValue.ToString();
                 idbooking = Convert.ToInt32(booking);
             }
         }
 
         private void buybooking_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(Properties.Settings.Default.con);
+            
             con.Open();
-            SqlCommand cmd = new SqlCommand("select customer, seat,show from bookings where bookingID=" + idbooking, con);
+            cmd = new SqlCommand("select customer, seat,show from bookings where bookingID=" + idbooking, con);
             SqlDataReader rdr = cmd.ExecuteReader();
             int cust = 0, seat = 0, show = 0;
             if (rdr.HasRows)
@@ -84,5 +90,19 @@ namespace WindowsFormsApp2
             customers_bookDataGridView.DataSource = get_bookingBindingSource;
             MessageBox.Show("ВЫ ПРИОБРЕЛИ БИЛЕТ!\n\nСпасибо, что выбрали нас!\nПриятного просмотра! ", "Уведомление", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void canselbooking_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            cmd = new SqlCommand("delete from bookings where bookingID=" + idbooking, con);
+            cmd.ExecuteNonQuery();
+            cmd.Dispose();
+            con.Close();
+            get_bookingBindingSource.RemoveCurrent();
+            customers_bookDataGridView.DataSource = get_bookingBindingSource;
+            MessageBox.Show("Вы отменили бронь ", "Уведомление", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+
     }
 }

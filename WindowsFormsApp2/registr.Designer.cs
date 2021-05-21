@@ -47,11 +47,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.registracia = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.birth);
             this.groupBox1.Controls.Add(this.phone);
             this.groupBox1.Controls.Add(this.email);
@@ -71,7 +75,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(419, 375);
+            this.groupBox1.Size = new System.Drawing.Size(419, 411);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Пользователь";
@@ -79,6 +83,7 @@
             // birth
             // 
             this.birth.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.birth.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.birth.Location = new System.Drawing.Point(160, 318);
             this.birth.Name = "birth";
             this.birth.Size = new System.Drawing.Size(215, 30);
@@ -89,6 +94,7 @@
             this.phone.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.phone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(66)))), ((int)(((byte)(74)))));
             this.phone.Location = new System.Drawing.Point(160, 279);
+            this.phone.MaxLength = 11;
             this.phone.Name = "phone";
             this.phone.Size = new System.Drawing.Size(215, 30);
             this.phone.TabIndex = 21;
@@ -99,6 +105,7 @@
             this.email.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(66)))), ((int)(((byte)(74)))));
             this.email.Location = new System.Drawing.Point(160, 240);
+            this.email.MaxLength = 50;
             this.email.Name = "email";
             this.email.Size = new System.Drawing.Size(215, 30);
             this.email.TabIndex = 16;
@@ -108,6 +115,7 @@
             this.pass.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.pass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(66)))), ((int)(((byte)(74)))));
             this.pass.Location = new System.Drawing.Point(160, 201);
+            this.pass.MaxLength = 50;
             this.pass.Name = "pass";
             this.pass.Size = new System.Drawing.Size(215, 30);
             this.pass.TabIndex = 15;
@@ -117,6 +125,7 @@
             this.login.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(66)))), ((int)(((byte)(74)))));
             this.login.Location = new System.Drawing.Point(160, 162);
+            this.login.MaxLength = 50;
             this.login.Name = "login";
             this.login.Size = new System.Drawing.Size(215, 30);
             this.login.TabIndex = 14;
@@ -126,6 +135,7 @@
             this.dad_name.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.dad_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(66)))), ((int)(((byte)(74)))));
             this.dad_name.Location = new System.Drawing.Point(160, 123);
+            this.dad_name.MaxLength = 50;
             this.dad_name.Name = "dad_name";
             this.dad_name.Size = new System.Drawing.Size(215, 30);
             this.dad_name.TabIndex = 13;
@@ -136,6 +146,7 @@
             this.name.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(66)))), ((int)(((byte)(74)))));
             this.name.Location = new System.Drawing.Point(160, 84);
+            this.name.MaxLength = 50;
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(215, 30);
             this.name.TabIndex = 12;
@@ -146,6 +157,7 @@
             this.last_name.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.last_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(66)))), ((int)(((byte)(74)))));
             this.last_name.Location = new System.Drawing.Point(160, 45);
+            this.last_name.MaxLength = 50;
             this.last_name.Name = "last_name";
             this.last_name.Size = new System.Drawing.Size(215, 30);
             this.last_name.TabIndex = 11;
@@ -246,7 +258,7 @@
             this.registracia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.registracia.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.registracia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(66)))), ((int)(((byte)(74)))));
-            this.registracia.Location = new System.Drawing.Point(12, 393);
+            this.registracia.Location = new System.Drawing.Point(12, 429);
             this.registracia.Name = "registracia";
             this.registracia.Size = new System.Drawing.Size(419, 34);
             this.registracia.TabIndex = 23;
@@ -254,18 +266,41 @@
             this.registracia.UseVisualStyleBackColor = false;
             this.registracia.Click += new System.EventHandler(this.registracia_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
+            this.label1.Location = new System.Drawing.Point(8, 358);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(52, 23);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Роль";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(160, 355);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(215, 31);
+            this.comboBox1.TabIndex = 24;
+            // 
             // registr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(449, 473);
+            this.ClientSize = new System.Drawing.Size(448, 481);
             this.Controls.Add(this.registracia);
             this.Controls.Add(this.groupBox1);
             this.ForeColor = System.Drawing.SystemColors.Control;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "registr";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Создание личного кабинета";
             this.Load += new System.EventHandler(this.registr_Load_1);
@@ -295,5 +330,7 @@
         private System.Windows.Forms.TextBox phone;
         private System.Windows.Forms.DateTimePicker birth;
         private System.Windows.Forms.Button registracia;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

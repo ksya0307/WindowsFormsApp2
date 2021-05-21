@@ -19,6 +19,7 @@ namespace WindowsFormsApp2
         public ticketsguest(string iduser)
         {
             id_user = Int32.Parse(iduser);
+            Console.WriteLine(iduser + "");
             InitializeComponent();
         }
         private void ticketsguest_Load(object sender, EventArgs e)

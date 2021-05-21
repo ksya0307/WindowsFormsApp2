@@ -31,10 +31,13 @@ namespace WindowsFormsApp2
         
         private void Form4_Load(object sender, EventArgs e)
         {
+            this.cinemaDataSet.EnforceConstraints = false;
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cinemaDataSet.scheduleView". При необходимости она может быть перемещена или удалена.
+            this.scheduleViewTableAdapter.Fill(this.cinemaDataSet.scheduleView);
             book.Visible = false;
             buy.Visible = false;
 
-            //this.scheduleViewTableAdapter.Fill(this.cinemaDataSet.scheduleView);
+            this.scheduleViewTableAdapter.Fill(this.cinemaDataSet.scheduleView);
             
             con.Open();
             cmd = new SqlCommand("select last_name, name from users where login='" + loginuser + "'", con);
@@ -139,6 +142,7 @@ namespace WindowsFormsApp2
 
             con.Open();
             SqlCommand sql = new SqlCommand("select zal from shows where id='" + idshow + "'",con);
+            Console.WriteLine(idshow);
 
             SqlDataReader rdr = sql.ExecuteReader();
 
@@ -151,6 +155,7 @@ namespace WindowsFormsApp2
             }
             rdr.Close();
             con.Close();
+            Console.WriteLine(zal);
             switch (zal)
             {
                 case 1:
@@ -268,7 +273,7 @@ namespace WindowsFormsApp2
 
             con.Open();
             cmd = new SqlCommand("select id from users where login='" + loginuser + "'", con);
-
+            Console.WriteLine(loginuser);
             SqlDataReader rdr = cmd.ExecuteReader();
 
             if (rdr.HasRows)
@@ -278,6 +283,7 @@ namespace WindowsFormsApp2
                     iduser = Convert.ToString(rdr.GetInt32(0));
                 }
             }
+            Console.WriteLine(iduser);
             rdr.Close();
             con.Close();
             ticketsguest ticketsguest = new ticketsguest(iduser);

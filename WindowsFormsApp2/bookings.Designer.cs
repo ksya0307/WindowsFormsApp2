@@ -69,11 +69,11 @@
             this.openbuybook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.openbuybook.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.openbuybook.ForeColor = System.Drawing.SystemColors.Control;
-            this.openbuybook.Location = new System.Drawing.Point(152, 12);
+            this.openbuybook.Location = new System.Drawing.Point(12, 12);
             this.openbuybook.Name = "openbuybook";
-            this.openbuybook.Size = new System.Drawing.Size(207, 46);
+            this.openbuybook.Size = new System.Drawing.Size(517, 46);
             this.openbuybook.TabIndex = 1;
-            this.openbuybook.Text = "ВЫКУПИТЬ БРОНЬ";
+            this.openbuybook.Text = "ВЫКУПИТЬ  или ОТМЕНИТЬ БРОНЬ";
             this.openbuybook.UseVisualStyleBackColor = false;
             this.openbuybook.Click += new System.EventHandler(this.openbuybook_Click);
             // 

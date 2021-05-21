@@ -21,6 +21,7 @@ namespace WindowsFormsApp2
 
         private void bookings_Load(object sender, EventArgs e)
         {
+            this.cinemaDataSet.EnforceConstraints = false;
             this.get_bookingTableAdapter.Fill(this.cinemaDataSet.get_booking, id_user);
             this.reportViewer1.RefreshReport();
         }
@@ -31,5 +32,6 @@ namespace WindowsFormsApp2
             buybook buybook = new buybook(id_user);
             buybook.ShowDialog();
         }
+
     }
 }
